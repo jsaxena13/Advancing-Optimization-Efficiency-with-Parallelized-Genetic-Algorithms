@@ -1,0 +1,72 @@
+scp C:\Users\User1\Desktop\sample.m student64@carnie.cscdr.umassd.edu:/home/student64
+
+
+### Title: Enhancing Optimization with Parallelized Genetic Algorithms
+
+#### Introduction:
+Genetic Algorithms (GAs) emulate the process of natural selection to solve complex optimization problems. Parallelizing GAs leverages multiple cores, aiming to expedite the convergence of solutions.
+
+#### Purpose:
+This study investigates the impact of parallelization on Genetic Algorithms by examining execution times across different core counts, aiming to enhance the efficiency of optimization processes.
+
+#### Significance:
+Optimization problems are prevalent in various fields, demanding efficient solutions. Parallelizing GAs could potentially offer substantial time savings and resource optimization.
+
+#### Relevance:
+In the era of multi-core processors, harnessing parallel computing capabilities becomes pivotal. Understanding the relationship between core counts and performance aids in optimizing algorithms for speed and efficiency.
+
+#### Hypothesis:
+Increasing core counts will linearly reduce execution times, facilitating faster convergence of Genetic Algorithms in optimization tasks.
+
+#### Methods:
+Utilizing MATLAB's Parallel Computing Toolbox, a Genetic Algorithm was implemented to minimize the sum of squares of a 10-variable problem.
+
+#### Algorithms & Terminologies:
+Genetic Algorithms evolve a population of potential solutions through selection, crossover, and mutation operations across multiple generations.
+
+#### Results and Analysis:
+
+##### Execution Times:
+- **2 cores:** Execution time: 80.5493s
+- **4 cores:** Execution time: 35.7826s
+- **6 cores:** Execution time: 39.7006s
+- **8 cores:** Execution time: 41.9951s
+- **10 cores:** Execution time: 39.8404s
+- **12 cores:** Execution time: 39.1971s
+
+#### Efficiency and Speedup Analysis:
+
+##### Speedup:
+Speedup is calculated as the ratio of the execution time on a single core to the execution time on multiple cores.
+- **Speedup (2 cores):** 1x (baseline)
+- **Speedup (4 cores):** 2.25x
+- **Speedup (6 cores):** 2.03x
+- **Speedup (8 cores):** 1.92x
+- **Speedup (10 cores):** 2.02x
+- **Speedup (12 cores):** 2.05x
+
+##### Efficiency:
+Efficiency represents the speedup achieved per added core and is calculated as Speedup divided by the number of cores used.
+- **Efficiency (2 cores):** 50%
+- **Efficiency (4 cores):** 56.25%
+- **Efficiency (6 cores):** 33.83%
+- **Efficiency (8 cores):** 24%
+- **Efficiency (10 cores):** 20.2%
+- **Efficiency (12 cores):** 17.08%
+
+#### Observations:
+- **Efficiency:** Decreases as core count increases, indicating diminishing returns per added core.
+- **Speedup:** Non-linear relationship between cores and speedup due to parallelization overhead and resource contention.
+
+#### Potential Improvements:
+- Optimization of GA parameters for parallel execution.
+- Profiling to identify and address bottlenecks affecting parallel efficiency.
+- Utilizing advanced parallel computing strategies to minimize overhead.
+
+#### Implications:
+Parallelized GAs showcase potential for faster optimization, but their efficiency varies with core counts. The diminishing returns per added core stress the need for balanced utilization of resources.
+
+#### Conclusion:
+Parallelized Genetic Algorithms offer accelerated optimization but necessitate a careful balance between core utilization and system constraints. Understanding the intricacies of parallel efficiency aids in optimizing algorithm performance.
+
+This study illuminates the significance of parallelization in optimization algorithms, underscoring the need for nuanced resource management to maximize efficiency in parallel Genetic Algorithm implementations.
